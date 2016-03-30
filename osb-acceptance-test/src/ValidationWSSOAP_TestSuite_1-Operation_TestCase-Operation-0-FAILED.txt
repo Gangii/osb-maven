@@ -1,0 +1,27 @@
+Status: FAILED
+Time Taken: 3213
+Size: 0
+Timestamp: Wed Mar 30 12:29:12 IST 2016
+TestStep: Operation
+
+----------------- Messages ------------------------------
+org.apache.http.conn.HttpHostConnectException: Connection to http://ADMINIB-7I949P5.in.ibm.com:7001 refused
+
+----------------- Properties ------------------------------
+Encoding: UTF-8
+Endpoint: http://ADMINIB-7I949P5.in.ibm.com:7001/XSDvalidation/in
+
+---------------- Request ---------------------------
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:req="http://whitehorses.nl/request">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <req:request>
+         <req:runid>?</req:runid>
+         <!--Optional:-->
+         <req:message>?</req:message>
+      </req:request>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+---------------- Response --------------------------
+- missing response / garbage collected -
