@@ -51,6 +51,28 @@
 
       </executions>
      </plugin>
+	 
+	 <plugin>
+               <groupId>eviware</groupId>
+                <artifactId>maven-soapui-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                            <projectFile>C:\OSB\osb-acceptance-test\src\test\XSDvalidation-soapui-project.xml</projectFile>
+                            <junitReport>true</junitReport>
+                            <outputFolder>C:\OSB\target\surefire-reports\</outputFolder>
+							<printReport>true</printReport>
+                            <testSuite>ValidationWSSOAP_TestSuite</testSuite>
+                        </configuration>
+                <executions>
+                    <execution>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>  
+		
      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
@@ -58,7 +80,16 @@
      </plugin>
     </plugins>
   </build>
-
+	
+	<reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        </plugin>
+    </plugins>
+  </reporting>
+  
   <distributionManagement>
      <repository>
        <id>releases</id>

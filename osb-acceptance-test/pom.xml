@@ -1,23 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
-    <modelVersion>4.0.0</modelVersion>
-
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>biemond.core.osb</groupId>
     <artifactId>OSBworkspace</artifactId>
     <version>1.0</version>
     <relativePath>../parent/workspace/pom.xml</relativePath>
   </parent>
-
-    <groupId>biemond</groupId>
-    <artifactId>osb-acceptance-tests</artifactId>
-    <packaging>jar</packaging>
-    <version>1.0.0</version>
-    <name>${project.groupId}:${project.artifactId}</name>
-
-    <description>
+  <groupId>biemond</groupId>
+  <artifactId>osb.test.xsdvalidation</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+<name>${project.groupId}:${project.artifactId}</name>
+	<description>
         Acceptance Tests for the osb code
     </description>
 	
@@ -36,35 +29,9 @@
             <url>http://www.soapui.org/repository/maven2</url>
         </pluginRepository>
     </pluginRepositories>
-
-<profiles>
-        <profile>
-            <!-- For Local ONLY - require so that acceptance tests can be run locally
-                 on developers desktop via cdp:run etc -->
-            <id>env-local</id>
-    <build>
-        <plugins>
-            <plugin>
-               <groupId>eviware</groupId>
-                <artifactId>maven-soapui-plugin</artifactId>
-                <version>3.6.1</version>
-                <configuration>
-                            <projectFile>C:\OSB\osb-acceptance-test\src\test\XSDvalidation-soapui-project.xml</projectFile>
-                            <junitReport>true</junitReport>
-                            <outputFolder>reports</outputFolder>
-                            <testSuite>ValidationWSSOAP_TestSuite</testSuite>
-                        </configuration>
-                <executions>
-                    <execution>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>test</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>   
-        </plugins>
-    </build>
-		</profile>
-</profiles>
-</project>
+	
+	<properties>
+    <buildDirectory>${basedir}/osb-acceptance-test</buildDirectory>
+    </properties>
+	
+ </project>
