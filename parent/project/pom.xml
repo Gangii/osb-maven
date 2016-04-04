@@ -45,7 +45,7 @@
          <workingDirectory>${project.basedir}/../../plans</workingDirectory>
          <executable>java</executable>
          <!-- <commandlineArgs>-Dwlst.offline.log=/tmp/osb_project.log -classpath ${weblogic.home}/server/lib/weblogic.jar:${osb.home}/lib/alsb.jar:${osb.home}/lib/sb-kernel-wls.jar:${osb.home}/lib/sb-kernel-impl.jar:${osb.home}/lib/sb-kernel-api.jar:${osb.home}/modules/com.bea.common.configfwk_1.7.0.0.jar weblogic.WLST -skipWLSModuleScanning ${project.basedir}/../../import.py ${wls.username} ${wls.password} ${wls.server} ${osb.all.import.projects} ${project.basedir}/../../target/${project.artifactId}-${project.version}.jar ${osb.all.import.plan}-->
-         <commandlineArgs>-classpath $CLASSPATH:${osb.home}/lib/sb-kernel-api.jar weblogic.WLST C:\OSB\source/../import.py weblogic weblogic1 t3://localhost:7001 None C:\OSB\target/osb.source-1.5.2-SNAPSHOT.jar None
+         <commandlineArgs>weblogic.WLST C:\OSB\source/../import.py weblogic weblogic1 t3://localhost:7001 None C:\OSB\target/osb.source-1.5.2-SNAPSHOT.jar None
 		 </commandlineArgs>
         </configuration>
        </execution>
