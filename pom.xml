@@ -12,7 +12,7 @@
     <module>source</module>
     <module>source/ReliableMessageWS</module>
 	<module>source/XSDvalidation</module>
-	<module>osb-acceptance-test</module>
+	
   </modules>
 
   <scm>
