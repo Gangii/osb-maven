@@ -9,7 +9,7 @@
   <name>Parent Project</name>
 
   <modules>
-    <module>source</module>
+    <!-- <module>source</module> -->
     <module>source/ReliableMessageWS</module>
 	<module>source/XSDvalidation</module>
 	
